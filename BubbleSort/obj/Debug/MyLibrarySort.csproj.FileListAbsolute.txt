@@ -1,0 +1,6 @@
+D:\GitRepository\Projects\MyProject\BubbleSort\bin\Debug\BubbleSort.dll.config
+D:\GitRepository\Projects\MyProject\BubbleSort\bin\Debug\BubbleSort.dll
+D:\GitRepository\Projects\MyProject\BubbleSort\bin\Debug\BubbleSort.pdb
+D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\BubbleSort.dll
+D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\BubbleSort.pdb
+D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\MyLibrarySort.csprojResolveAssemblyReference.cache

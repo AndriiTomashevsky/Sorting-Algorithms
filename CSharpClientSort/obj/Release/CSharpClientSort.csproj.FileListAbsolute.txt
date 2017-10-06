@@ -1,0 +1,1 @@
+D:\GitRepository\Projects\MyProject\CSharpClientSort\bin\Release\CSharpClientSort.exe.config
