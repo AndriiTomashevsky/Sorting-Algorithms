@@ -19,8 +19,7 @@ namespace CSharpClientSort
                
             };
 
-            StudentComparer comparer = new StudentComparer();
-            comparer.SortBy = SortCriteria.NameThenAge;
+            StudentComparer comparer = new StudentComparer(SortCriteria.NameThenAge);
 
             BubbleSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
 

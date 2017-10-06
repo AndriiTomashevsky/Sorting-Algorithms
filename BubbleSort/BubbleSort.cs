@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyLibrarySort
 {
@@ -53,6 +50,7 @@ namespace MyLibrarySort
         private void _BubbleSort( T[] items)
         {
             bool swapped;
+            int lenght = items.Length;
 
             do
             {
@@ -67,6 +65,7 @@ namespace MyLibrarySort
                         swapped = true;
                     }
                 }
+                lenght--;
             }
             while (swapped != false);
         }

@@ -6,14 +6,19 @@ namespace CSharpClientSort
 {
     class StudentComparer : IComparer<Student>
     {
-        public SortCriteria SortBy = SortCriteria.NameThenAge;
+        bool isNameThenAge;
+
+        public StudentComparer(SortCriteria SortBy)
+        {
+            isNameThenAge = (SortCriteria.NameThenAge == SortBy);
+        }
 
         public int Compare(Student x, Student y)
         {
             CaseInsensitiveComparer comparer = new CaseInsensitiveComparer();
             int result = comparer.Compare(x.Name, y.Name);
 
-            if (SortBy == SortCriteria.NameThenAge)
+            if (isNameThenAge)
             {
                 if (result != 0)
                     return result;
