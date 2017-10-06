@@ -56,7 +56,7 @@ namespace MyLibrarySort
             {
                 swapped = false;
 
-                for (int i = 1; i < items.Length; i++)
+                for (int i = 1; i < lenght; i++)
                 {
                     if (this.Compare(items[i - 1], items[i]) > 0)
                     {
