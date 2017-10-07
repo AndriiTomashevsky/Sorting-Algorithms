@@ -23,7 +23,7 @@ namespace MyLibrarySort
         public static void Sort(T[] list, IComparer<T> comparer, ListSortDirection direction)
         {
             BubbleSort<T> sort = new BubbleSort<T>(list, comparer, direction);
-            sort._BubbleSort( list);//(array);
+            sort._BubbleSort(list);
         }
 
         // This method is used internally to compare values.
@@ -47,7 +47,7 @@ namespace MyLibrarySort
             }
         }
 
-        private void _BubbleSort( T[] items)
+        private void _BubbleSort(T[] items)
         {
             bool swapped;
             int lenght = items.Length;
@@ -58,7 +58,7 @@ namespace MyLibrarySort
 
                 for (int i = 1; i < lenght; i++)
                 {
-                    if (this.Compare(items[i - 1], items[i]) > 0)
+                    if (Compare(items[i - 1], items[i]) > 0)
                     {
                         Swap(items, i - 1, i);
 
