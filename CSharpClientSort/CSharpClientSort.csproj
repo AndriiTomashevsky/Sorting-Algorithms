@@ -51,7 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BubbleSort\MyLibrarySort.csproj">
+    <ProjectReference Include="..\MyLibrarySort\MyLibrarySort.csproj">
       <Project>{eac21fc3-ef4c-41c5-b01b-9707c4cbe19a}</Project>
       <Name>MyLibrarySort</Name>
     </ProjectReference>

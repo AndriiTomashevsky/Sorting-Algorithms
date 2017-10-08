@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpClientSort", "CSharpClientSort\CSharpClientSort.csproj", "{A94CF0AB-F86D-4D50-88C6-6062C612B3DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrarySort", "BubbleSort\MyLibrarySort.csproj", "{EAC21FC3-EF4C-41C5-B01B-9707C4CBE19A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrarySort", "MyLibrarySort\MyLibrarySort.csproj", "{EAC21FC3-EF4C-41C5-B01B-9707C4CBE19A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
