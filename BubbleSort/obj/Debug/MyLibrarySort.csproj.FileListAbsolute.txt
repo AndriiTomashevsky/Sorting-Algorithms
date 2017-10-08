@@ -4,3 +4,9 @@ D:\GitRepository\Projects\MyProject\BubbleSort\bin\Debug\BubbleSort.pdb
 D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\BubbleSort.dll
 D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\BubbleSort.pdb
 D:\GitRepository\Projects\MyProject\BubbleSort\obj\Debug\MyLibrarySort.csprojResolveAssemblyReference.cache
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\bin\Debug\MergeSort.dll.config
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\bin\Debug\MergeSort.dll
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\bin\Debug\MergeSort.pdb
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\obj\Debug\MyLibrarySort.csprojResolveAssemblyReference.cache
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\obj\Debug\MergeSort.dll
+D:\GitRepository\My_project\Sorting_algorithms\BubbleSort\obj\Debug\MergeSort.pdb

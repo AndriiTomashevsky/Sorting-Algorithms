@@ -11,7 +11,7 @@ namespace CSharpClientSort
             Student[] array = new Student[] 
             { 
                 new Student("Constantin", 18),
-                new Student("Andre", 32),
+                new Student("Andre", 32),   
                 new Student("Alex", 19),
                 new Student("Boris", 19),
                 new Student("boris", 18),
@@ -21,8 +21,14 @@ namespace CSharpClientSort
 
             StudentComparer comparer = new StudentComparer(SortCriteria.NameThenAge);
 
-            MergeSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
-            //BubbleSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+            BubbleSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+
+            //MergeSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+
+            //QuickSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+
+            //SelectionSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+
             //InsertionSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
 
             foreach (var item in array)
