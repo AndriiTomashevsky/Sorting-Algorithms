@@ -6,3 +6,11 @@ D:\GitRepository\Projects\MyProject\CSharpClientSort\bin\Debug\BubbleSort.pdb
 D:\GitRepository\Projects\MyProject\CSharpClientSort\obj\Debug\CSharpClientSort.csprojResolveAssemblyReference.cache
 D:\GitRepository\Projects\MyProject\CSharpClientSort\obj\Debug\CSharpClientSort.exe
 D:\GitRepository\Projects\MyProject\CSharpClientSort\obj\Debug\CSharpClientSort.pdb
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\CSharpClientSort.exe.config
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\CSharpClientSort.exe
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\CSharpClientSort.pdb
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\MyLibrarySort.dll
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\MyLibrarySort.pdb
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\obj\Debug\CSharpClientSort.csprojResolveAssemblyReference.cache
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\obj\Debug\CSharpClientSort.exe
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\obj\Debug\CSharpClientSort.pdb
