@@ -18,19 +18,17 @@ namespace CSharpClientSort
                 new Student("Ivan", 18),
             };
 
+            StudentComparer comparer = new StudentComparer(SortCriteria.NameThenAge, ListSortDirection.Ascending);
 
+            //MergeSort<Student>.Sort(array, comparer);
 
-            StudentComparer comparer = new StudentComparer(SortCriteria.AgeThenName);
+            //BubbleSort<Student>.Sort(array, comparer);
 
-            MergeSort<Student>.Sort(array, comparer, ListSortDirection.Descending);
+            //QuickSort<Student>.Sort(array, comparer);
 
-            //BubbleSort<Student>.Sort(array, comparer, ListSortDirection.Descending);
+            //SelectionSort<Student>.Sort(array, comparer);
 
-            //QuickSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
-
-            //SelectionSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
-
-            //InsertionSort<Student>.Sort(array, comparer, ListSortDirection.Ascending);
+            InsertionSort<Student>.Sort(array, comparer);
 
             foreach (var item in array)
             {
@@ -48,7 +46,7 @@ namespace CSharpClientSort
                 new Student("alex", 19),
             };
 
-            Student[] mergingArrays = MergingTwoCollections<Student>.Merge(array, _array, comparer, ListSortDirection.Descending);
+            Student[] mergingArrays = MergingTwoCollections<Student>.Merge(array, _array, comparer);
 
             foreach (var item in mergingArrays)
             {

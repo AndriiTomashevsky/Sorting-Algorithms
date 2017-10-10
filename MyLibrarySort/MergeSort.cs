@@ -7,26 +7,16 @@ namespace MyLibrarySort
     public class MergeSort<T>
     {
         IComparer<T> comparer;
-        bool isAscending;
 
-        private MergeSort(T[] array, IComparer<T> comparer, ListSortDirection direction)
+        private MergeSort(T[] array, IComparer<T> comparer)
         {
             this.comparer = comparer;
-            this.isAscending = (direction == ListSortDirection.Ascending);
         }
 
-        public static void Sort(T[] array, IComparer<T> comparer, ListSortDirection direction)
+        public static void Sort(T[] array, IComparer<T> comparer)
         {
-            MergeSort<T> sort = new MergeSort<T>(array, comparer, direction);
+            MergeSort<T> sort = new MergeSort<T>(array, comparer);
             sort._MegreSort(array);
-        }
-
-        private int Compare(T x, T y)
-        {
-            if (isAscending)
-                return comparer.Compare(x, y);
-            else
-                return -1 * comparer.Compare(x, y);
         }
 
         private void _MegreSort(T[] items)
@@ -70,7 +60,7 @@ namespace MyLibrarySort
                     items[targetIndex] = left[leftIndex++];
                 }
 
-                else if (Compare(left[leftIndex],right[rightIndex]) < 0)
+                else if (comparer.Compare(left[leftIndex],right[rightIndex]) < 0)
                 {
                     items[targetIndex] = left[leftIndex++];
                 }

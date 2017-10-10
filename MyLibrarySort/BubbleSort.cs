@@ -9,32 +9,17 @@ namespace MyLibrarySort
         // the comparer to use (our PropertyComparer in this case)
         IComparer<T> comparer;
 
-        // used to tell if the sort should be ascending or descending
-        bool isAscending;
-
         // private constructor, used only inside this class by the static Sort method
-        private BubbleSort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+        private BubbleSort(T[] list, IComparer<T> comparer)
         {
             this.comparer = comparer;
-            this.isAscending = (direction == ListSortDirection.Ascending);
         }
 
         // This is the method you actually call to do the sort
-        public static void Sort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+        public static void Sort(T[] list, IComparer<T> comparer)
         {
-            BubbleSort<T> sort = new BubbleSort<T>(list, comparer, direction);
+            BubbleSort<T> sort = new BubbleSort<T>(list, comparer);
             sort._BubbleSort(list);
-        }
-
-        // This method is used internally to compare values.
-        // it will check the order and return the inverse values
-        // if you are sorting in descending order
-        private int Compare(T x, T y)
-        {
-            if (isAscending)
-                return comparer.Compare(x, y);
-            else
-                return comparer.Compare(y, x);
         }
 
         private void Swap(T[] items, int left, int right)
@@ -58,7 +43,7 @@ namespace MyLibrarySort
 
                 for (int i = 1; i < lenght; i++)
                 {
-                    if (Compare(items[i - 1], items[i]) > 0)
+                    if (comparer.Compare(items[i - 1], items[i]) > 0)
                     {
                         Swap(items, i - 1, i);
 

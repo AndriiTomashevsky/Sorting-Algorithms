@@ -7,27 +7,18 @@ namespace MyLibrarySort
     public class SelectionSort<T>
     {
         IComparer<T> comparer;
-        bool isAscending;
 
-        private SelectionSort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+        private SelectionSort(T[] list, IComparer<T> comparer)
         {
             this.comparer = comparer;
-            this.isAscending = (direction == ListSortDirection.Ascending);
         }
 
-         public static void Sort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+         public static void Sort(T[] list, IComparer<T> comparer)
          {
-             SelectionSort<T> sort = new SelectionSort<T>(list, comparer, direction);
+             SelectionSort<T> sort = new SelectionSort<T>(list, comparer);
              sort._SelectionSort(list);
          }
 
-         private int Compare(T x, T y)
-         {
-             if (isAscending)
-                 return comparer.Compare(x, y);
-             else
-                 return -1 * comparer.Compare(x, y);
-         }
          private void Swap(T[] items, int left, int right)
          {
              if (left != right)
@@ -39,13 +30,10 @@ namespace MyLibrarySort
          }
          private void _SelectionSort(T[] items)
          {
-             int sortedRangeEnd = 0;
-
-             while (sortedRangeEnd < items.Length)
+             for (int sortedRangeEnd = 0; sortedRangeEnd < items.Length; sortedRangeEnd++)
              {
                  int nextIndex = FindIndexOfSmallestFromIndex(items, sortedRangeEnd);
                  Swap(items, sortedRangeEnd, nextIndex);
-                 sortedRangeEnd++;
              }
          }
          private int FindIndexOfSmallestFromIndex(T[] items, int sortedRangeEnd)
@@ -55,13 +43,12 @@ namespace MyLibrarySort
 
              for (int i = sortedRangeEnd + 1; i < items.Length; i++)
              {
-                 if (Compare(currentSmallest,items[i]) > 0)
+                 if (comparer.Compare(currentSmallest,items[i]) > 0)
                  {
                      currentSmallest = items[i];
                      currentSmallestIndex = i;
                  }
              }
-
              return currentSmallestIndex;
          } 
     }

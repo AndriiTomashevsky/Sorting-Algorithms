@@ -7,27 +7,18 @@ namespace MyLibrarySort
     public class QuickSort<T>
     {
         IComparer<T> comparer;
-        bool isAscending;
 
-        private QuickSort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+        private QuickSort(T[] list, IComparer<T> comparer)
         {
             this.comparer = comparer;
-            this.isAscending = (direction == ListSortDirection.Ascending);
         }
 
-         public static void Sort(T[] list, IComparer<T> comparer, ListSortDirection direction)
+         public static void Sort(T[] list, IComparer<T> comparer)
          {
-             QuickSort<T> sort = new QuickSort<T>(list, comparer, direction);
+             QuickSort<T> sort = new QuickSort<T>(list, comparer);
              sort._QuickSort(list);
          }
 
-         private int Compare(T x, T y)
-         {
-             if (isAscending)
-                 return comparer.Compare(x, y);
-             else
-                 return -1 * comparer.Compare(x, y);
-         }
          private void Swap(T[] items, int left, int right)
          {
              if (left != right)
@@ -64,7 +55,7 @@ namespace MyLibrarySort
 
              for (int i = left; i < right; i++)
              {
-                 if (Compare(items[i],pivotValue) < 0)
+                 if (comparer.Compare(items[i],pivotValue) < 0)
                  {
                      Swap(items, i, storeIndex);
                      storeIndex += 1;
