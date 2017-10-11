@@ -8,14 +8,14 @@ namespace MyLibrarySort
     {
         IComparer<T> comparer;
 
-        private SelectionSort(T[] list, IComparer<T> comparer)
+        private SelectionSort(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
          public static void Sort(T[] list, IComparer<T> comparer)
          {
-             SelectionSort<T> sort = new SelectionSort<T>(list, comparer);
+             SelectionSort<T> sort = new SelectionSort<T>(comparer);
              sort._SelectionSort(list);
          }
 

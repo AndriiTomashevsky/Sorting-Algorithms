@@ -11,14 +11,14 @@ namespace MyLibrarySort
     {
         IComparer<T> comparer;
 
-        private InsertionSort(T[] array, IComparer<T> comparer)
+        private InsertionSort(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
         public static void Sort(T[] array, IComparer<T> comparer)
         {
-            InsertionSort<T> sort = new InsertionSort<T>(array, comparer);
+            InsertionSort<T> sort = new InsertionSort<T>(comparer);
             sort._InsertionSort(array);
         }
 

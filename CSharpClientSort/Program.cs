@@ -20,7 +20,7 @@ namespace CSharpClientSort
 
             StudentComparer comparer = new StudentComparer(SortCriteria.NameThenAge, ListSortDirection.Ascending);
 
-            //MergeSort<Student>.Sort(array, comparer);
+            MergeSort<Student>.Sort(array, comparer);
 
             //BubbleSort<Student>.Sort(array, comparer);
 
@@ -28,7 +28,7 @@ namespace CSharpClientSort
 
             //SelectionSort<Student>.Sort(array, comparer);
 
-            InsertionSort<Student>.Sort(array, comparer);
+            //InsertionSort<Student>.Sort(array, comparer);
 
             foreach (var item in array)
             {

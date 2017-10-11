@@ -11,14 +11,14 @@ namespace MyLibrarySort
     {
         IComparer<T> comparer;
 
-        private MergingTwoCollections(T[] array, IComparer<T> comparer)
+        private MergingTwoCollections(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
         public static T[] Merge(T[] array, T[] _array, IComparer<T> comparer)
         {
-            MergingTwoCollections<T> sort = new MergingTwoCollections<T>(array, comparer);
+            MergingTwoCollections<T> sort = new MergingTwoCollections<T>(comparer);
             MergeSort<T>.Sort(array, comparer);
             MergeSort<T>.Sort(_array, comparer);
             return sort._MergingTwoCollections(array, _array);

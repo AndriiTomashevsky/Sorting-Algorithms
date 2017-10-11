@@ -10,7 +10,7 @@ namespace MyLibrarySort
         IComparer<T> comparer;
 
         // private constructor, used only inside this class by the static Sort method
-        private BubbleSort(T[] list, IComparer<T> comparer)
+        private BubbleSort(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
@@ -18,7 +18,7 @@ namespace MyLibrarySort
         // This is the method you actually call to do the sort
         public static void Sort(T[] list, IComparer<T> comparer)
         {
-            BubbleSort<T> sort = new BubbleSort<T>(list, comparer);
+            BubbleSort<T> sort = new BubbleSort<T>(comparer);
             sort._BubbleSort(list);
         }
 

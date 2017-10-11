@@ -8,14 +8,14 @@ namespace MyLibrarySort
     {
         IComparer<T> comparer;
 
-        private MergeSort(T[] array, IComparer<T> comparer)
+        private MergeSort(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
         public static void Sort(T[] array, IComparer<T> comparer)
         {
-            MergeSort<T> sort = new MergeSort<T>(array, comparer);
+            MergeSort<T> sort = new MergeSort<T>(comparer);
             sort._MegreSort(array);
         }
 

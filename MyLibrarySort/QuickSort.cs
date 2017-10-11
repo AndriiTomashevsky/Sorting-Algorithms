@@ -8,14 +8,14 @@ namespace MyLibrarySort
     {
         IComparer<T> comparer;
 
-        private QuickSort(T[] list, IComparer<T> comparer)
+        private QuickSort(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
          public static void Sort(T[] list, IComparer<T> comparer)
          {
-             QuickSort<T> sort = new QuickSort<T>(list, comparer);
+             QuickSort<T> sort = new QuickSort<T>(comparer);
              sort._QuickSort(list);
          }
 
