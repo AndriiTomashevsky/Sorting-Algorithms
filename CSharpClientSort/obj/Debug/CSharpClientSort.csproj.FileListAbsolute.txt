@@ -1,0 +1,1 @@
+D:\GitRepository\My_project\Sorting_algorithms\CSharpClientSort\bin\Debug\CSharpClientSort.exe.config
